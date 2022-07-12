@@ -1,0 +1,32 @@
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+networks:
+  rinkeby:
+    ethusdt_price:
+      '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    abc:
+      True
+  kovan:
+    abc:
+      True
+    ethusdt_price:
+      '0x9326BFA02ADD2366b30bacB125260Af641031331'
+  mainnet-fork-dev:
+    ethusdt_price:
+      '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    abc:
+      False
+  ganache-local:
+    abc:
+      False
+  development:
+    abc:
+      False
+
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
